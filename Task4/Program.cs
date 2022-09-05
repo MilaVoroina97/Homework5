@@ -9,7 +9,7 @@ void CheckPallindrom(int[] massiv)
     {
         if(massiv[i] != massiv[size-1 -i])
         {
-            Console.WriteLine("No");
+            Console.WriteLine("Нет. Данное число не является палиндромом");
             break;
         }
         else
@@ -21,7 +21,7 @@ void CheckPallindrom(int[] massiv)
         }
         if(count == size/2)
         {
-            Console.WriteLine("Yes");
+            Console.WriteLine("Да. Данное число является палиндромом");
         }
     }
 
