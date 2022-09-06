@@ -39,10 +39,20 @@ int[] FillArray(string x)
     }
     return array;
 }
-Console.WriteLine("Введите любое целое число: ");
-string N = Console.ReadLine();
-int[] result = FillArray(N);
-CheckPallindrom(result);
+try
+{
+    Console.WriteLine("Введите любое целое число: ");
+    string N = Console.ReadLine();
+    int[] result = FillArray(N);
+    CheckPallindrom(result);
+
+}
+catch 
+{
+    
+    Console.WriteLine("Пожалуйста, введите целое число.");
+}
+
 
 
 
