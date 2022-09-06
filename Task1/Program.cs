@@ -2,9 +2,7 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 
 //[345, 897, 568, 234] -> 2
-Console.WriteLine("Введите число, обозначающее размер массива");
-int N = Convert.ToInt32(Console.ReadLine());
-int[] result = new int[N];
+
 int[] FillArray(int[] array)
 {
     for(int i = 0; i < array.Length; i++)
@@ -28,6 +26,16 @@ int EvenNumbers(int[] massiv)
     }
     return count;
 }
-FillArray(result);
-int number = EvenNumbers(result);
-Console.WriteLine($"Количество четных чисел в массиве: {number}");
+try
+{
+    Console.WriteLine("Введите число, обозначающее размер массива");
+    int N = Convert.ToInt32(Console.ReadLine());
+    int[] result = new int[N];
+    FillArray(result);
+    int number = EvenNumbers(result);
+    Console.WriteLine($"Количество четных чисел в массиве: {number}");
+}
+catch
+{
+    Console.WriteLine("Размер массива должен быть целым числом.");
+}
